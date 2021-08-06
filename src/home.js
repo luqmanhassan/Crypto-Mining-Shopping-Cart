@@ -1,11 +1,32 @@
 import React from 'react';
-// , {useState}
-// import {Link} from 'react-router-dom';
-// <Link to="/home">Link To Profile</Link>
+import {Link} from 'react-router-dom';
+
 const Home = () => {
   return (
-    <div>
-      <h1>Hello from Home</h1>
+    <div className="home">
+      <nav>
+        <div id="logo">iFix</div>
+        <div id="nav_right">
+          <span>
+            <Link to="/shop" style={{textDecoration: 'none', color: 'white'}}>
+              Shop
+            </Link>
+          </span>
+          <span>
+            <Link to="/cart" style={{textDecoration: 'none', color: 'white'}}>
+              Cart
+            </Link>
+          </span>
+        </div>
+      </nav>
+      <main>
+        <h1>Servicing your Electronic Repair Needs</h1>
+        <button>
+          <Link to="/shop" style={{textDecoration: 'none', color: 'black'}}>
+            Shop Now
+          </Link>
+        </button>
+      </main>
     </div>
   );
 };
