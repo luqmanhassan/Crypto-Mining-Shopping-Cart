@@ -4,4 +4,62 @@ html,
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: fantasy;
+}
+// Styling For Home Component
+.home {
+  background: url('./images/board.jpg') no-repeat;
+  background-size: cover;
+  height: 750px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  color: white;
+  padding: 20px 30px;
+  align-items: center;
+
+  #logo {
+    margin: 20px auto auto 50px;
+    font-size: 75px;
+  }
+  #nav_right {
+    margin-top: 20px;
+    font-size: 30px;
+    span {
+      margin: 10px;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        letter-spacing: 5px;
+        transition-duration: 2s;
+      }
+    }
+  }
+}
+
+main {
+  color: white;
+  margin-left: 80px;
+  margin-top: 50px;
+  h1 {
+  }
+  button {
+    padding: 10px 30px;
+    font-size: 20px;
+    color: black;
+    &:hover {
+      background: black;
+      cursor: pointer;
+      color: white;
+      box-shadow: 5px 5px white;
+      transition-duration: 2s;
+    }
+  }
+  link {
+    text-decoration: none;
+    color: black;
+  }
 }
