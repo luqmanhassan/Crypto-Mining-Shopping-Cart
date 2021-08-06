@@ -12,6 +12,29 @@ html,
   background: url("./images/board.jpg") no-repeat;
   background-size: cover;
   height: 750px;
+  color: white;
+}
+
+.home main {
+  color: white;
+  margin-left: 80px;
+  margin-top: 50px;
+}
+
+.home main button {
+  padding: 10px 30px;
+  font-size: 20px;
+  color: black;
+}
+
+.home main button:hover {
+  background: black;
+  cursor: pointer;
+  color: white;
+  -webkit-box-shadow: 5px 5px white;
+          box-shadow: 5px 5px white;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
 }
 
 nav {
@@ -22,16 +45,23 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: transparent;
-  color: white;
   padding: 20px 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-nav #logo {
+nav .logo {
   margin: 20px auto auto 50px;
   font-size: 75px;
+}
+
+nav .logo:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  letter-spacing: 5px;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
 }
 
 nav #nav_right {
@@ -51,30 +81,96 @@ nav #nav_right span:hover {
           transition-duration: 2s;
 }
 
-main {
-  color: white;
-  margin-left: 80px;
-  margin-top: 50px;
+.shop main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
-main button {
-  padding: 10px 30px;
-  font-size: 20px;
+.shop main aside {
+  margin: 0px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shop main aside h1 {
+  margin-bottom: 50px;
+}
+
+.shop main aside span {
+  margin: 10px 0px;
+}
+
+.shop main section {
+  margin: 0px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.shop main section .product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid black;
+  margin: 30px;
+}
+
+.shop main section .product img {
+  width: 200px;
+  padding: 20px;
+}
+
+.cart {
+  border: 3px solid black;
+  height: 100%;
+  min-width: 33.3%;
+  background: white url("./images/carticon.png") no-repeat center;
+  background-size: 100px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  right: 0px;
   color: black;
 }
 
-main button:hover {
-  background: black;
-  cursor: pointer;
-  color: white;
-  -webkit-box-shadow: 5px 5px white;
-          box-shadow: 5px 5px white;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
-}
-
-main link {
-  text-decoration: none;
-  color: black;
+.cart img {
+  width: 30px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 50px;
 }
 /*# sourceMappingURL=index.css.map */

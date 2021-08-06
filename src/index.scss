@@ -11,19 +11,45 @@ html,
   background: url('./images/board.jpg') no-repeat;
   background-size: cover;
   height: 750px;
+  color: white;
+
+  main {
+    color: white;
+    margin-left: 80px;
+    margin-top: 50px;
+    h1 {
+    }
+    button {
+      padding: 10px 30px;
+      font-size: 20px;
+      color: black;
+      &:hover {
+        background: black;
+        cursor: pointer;
+        color: white;
+        box-shadow: 5px 5px white;
+        transition-duration: 2s;
+      }
+    }
+  }
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   background-color: transparent;
-  color: white;
   padding: 20px 30px;
   align-items: center;
 
-  #logo {
+  .logo {
     margin: 20px auto auto 50px;
     font-size: 75px;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      letter-spacing: 5px;
+      transition-duration: 2s;
+    }
   }
   #nav_right {
     margin-top: 20px;
@@ -40,26 +66,64 @@ nav {
   }
 }
 
-main {
-  color: white;
-  margin-left: 80px;
-  margin-top: 50px;
-  h1 {
-  }
-  button {
-    padding: 10px 30px;
-    font-size: 20px;
-    color: black;
-    &:hover {
-      background: black;
-      cursor: pointer;
-      color: white;
-      box-shadow: 5px 5px white;
-      transition-duration: 2s;
+// Shop Styling
+
+.shop {
+  main {
+    display: flex;
+    justify-content: start;
+
+    aside {
+      margin: 0px 100px;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      h1 {
+        margin-bottom: 50px;
+      }
+      span {
+        margin: 10px 0px;
+      }
+    }
+
+    section {
+      margin: 0px 50px;
+      display: flex;
+      flex-flow: row wrap;
+      .product {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid black;
+        margin: 30px;
+        img {
+          width: 200px;
+          padding: 20px;
+        }
+        span {
+        }
+      }
     }
   }
-  link {
-    text-decoration: none;
-    color: black;
+}
+
+.cart {
+  border: 3px solid black;
+  height: 100%;
+  min-width: 33.3%;
+  background: white url('./images/carticon.png') no-repeat center;
+  background-size: 100px;
+  display: none;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  right: 0px;
+  color: black;
+  img {
+    width: 30px;
+    align-self: flex-end;
+    margin-right: 50px;
   }
 }
