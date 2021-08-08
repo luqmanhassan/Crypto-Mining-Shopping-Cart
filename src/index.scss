@@ -18,10 +18,11 @@ html,
     margin-left: 80px;
     margin-top: 50px;
     h1 {
+      font-size: 50px;
     }
     button {
       padding: 10px 30px;
-      font-size: 20px;
+      font-size: 30px;
       color: black;
       &:hover {
         background: black;
@@ -33,7 +34,7 @@ html,
     }
   }
 }
-
+// Styles For Nav
 nav {
   display: flex;
   justify-content: space-between;
@@ -80,34 +81,37 @@ nav {
       align-items: center;
       h1 {
         margin-bottom: 50px;
+        font-size: 30px;
       }
       span {
         margin: 10px 0px;
+        font-size: 20px;
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        &:active {
+          color: blue;
+        }
       }
     }
-
+    // Product Component
     section {
       margin: 0px 50px;
       display: flex;
       flex-flow: row wrap;
-      .product {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-        border: 3px solid black;
-        margin: 30px;
-        img {
-          width: 200px;
-          padding: 20px;
-        }
-        span {
-        }
-      }
     }
   }
 }
 
+.Batteries,
+.DataPorts,
+.RepairKits,
+.Cameras {
+  display: none;
+}
+
+//Cart Components
 .cart {
   border: 3px solid black;
   height: 100%;
@@ -125,5 +129,25 @@ nav {
     width: 30px;
     align-self: flex-end;
     margin-right: 50px;
+  }
+}
+
+// Product Component
+.Product {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  margin: 30px;
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  img {
+    width: 200px;
+    padding: 20px;
+  }
+  span {
   }
 }

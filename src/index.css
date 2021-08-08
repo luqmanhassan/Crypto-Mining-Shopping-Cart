@@ -21,9 +21,13 @@ html,
   margin-top: 50px;
 }
 
+.home main h1 {
+  font-size: 50px;
+}
+
 .home main button {
   padding: 10px 30px;
-  font-size: 20px;
+  font-size: 30px;
   color: black;
 }
 
@@ -106,10 +110,21 @@ nav #nav_right span:hover {
 
 .shop main aside h1 {
   margin-bottom: 50px;
+  font-size: 30px;
 }
 
 .shop main aside span {
   margin: 10px 0px;
+  font-size: 20px;
+}
+
+.shop main aside span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.shop main aside span:active {
+  color: blue;
 }
 
 .shop main section {
@@ -123,27 +138,11 @@ nav #nav_right span:hover {
           flex-flow: row wrap;
 }
 
-.shop main section .product {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 3px solid black;
-  margin: 30px;
-}
-
-.shop main section .product img {
-  width: 200px;
-  padding: 20px;
+.Batteries,
+.DataPorts,
+.RepairKits,
+.Cameras {
+  display: none;
 }
 
 .cart {
@@ -172,5 +171,33 @@ nav #nav_right span:hover {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-right: 50px;
+}
+
+.Product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid black;
+  margin: 30px;
+}
+
+.Product:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.Product img {
+  width: 200px;
+  padding: 20px;
 }
 /*# sourceMappingURL=index.css.map */
