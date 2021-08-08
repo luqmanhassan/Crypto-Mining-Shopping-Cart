@@ -1,11 +1,13 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
+import close from './images/close.png';
 const Cart = () => {
   let history = useHistory();
+
   return (
     <div className="cart" id="cart">
       <img
-        src="./images/close.png"
+        src={close}
         alt="close icon"
         onClick={() => {
           document.getElementById('cart').style.display = 'none';
