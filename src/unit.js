@@ -1,10 +1,15 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
 import Cart from './cart.js';
-
+import iphone11 from './images/iphone11.png';
 const Unit = (props) => {
   let history = useHistory();
-  let image = '' + props.image;
+  function addtocart() {
+    document.getElementById('cart').style.display = 'flex';
+    document.getElementById('emptybag').style.display = 'none';
+    document.getElementById('cart_stuff').style.display = 'flex';
+    document.getElementById('checkout').style.display = 'block';
+  }
   return (
     <div className="Unit" id="Unit">
       <Cart />
@@ -32,18 +37,24 @@ const Unit = (props) => {
           >
             Cart
           </span>
+          <span id="cart_items">0</span>
         </div>
       </nav>
       <main>
-        <div className="product">
-          <img src={props.image} alt={image} />
-          <span>{image}</span>
-          <span>{props.price}</span>
+        <div className="thing">
+          <img src={iphone11} alt="Iphone 11 Screen" />
+          <span>Iphone 11 Screen</span>
         </div>
-        <div className="product">
-          <span>{props.price}</span>
-          <button>Add To Cart</button>
-          <button>Go Back</button>
+        <div className="info">
+          <span>200$</span>
+          <button onClick={addtocart}>Add To Cart</button>
+          <button
+            onClick={() => {
+              history.push('/shop');
+            }}
+          >
+            Go Back
+          </button>
         </div>
       </main>
     </div>
