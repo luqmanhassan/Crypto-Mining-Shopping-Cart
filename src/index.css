@@ -127,8 +127,19 @@ nav #nav_right span:hover {
   color: blue;
 }
 
-.shop main section {
+.shop main .Batteries,
+.shop main .DataPorts,
+.shop main .RepairKits,
+.shop main .Cameras {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   margin: 0px 50px;
+}
+
+.shop main .Screens {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,21 +147,14 @@ nav #nav_right span:hover {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-}
-
-.Batteries,
-.DataPorts,
-.RepairKits,
-.Cameras {
-  display: none;
+  margin: 0px 50px;
 }
 
 .cart {
   border: 3px solid black;
   height: 100%;
+  background: white;
   min-width: 33.3%;
-  background: white url("./images/carticon.png") no-repeat center;
-  background-size: 100px;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -164,13 +168,22 @@ nav #nav_right span:hover {
   position: fixed;
   right: 0px;
   color: black;
+  text-align: center;
 }
 
-.cart img {
+.cart button {
+  font-size: 20px;
+}
+
+.cart .closeicon {
   width: 30px;
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-right: 50px;
+}
+
+.cart .carticon {
+  width: 200px;
 }
 
 .Product {
@@ -199,5 +212,112 @@ nav #nav_right span:hover {
 .Product img {
   width: 200px;
   padding: 20px;
+}
+
+.Unit main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Unit main .thing {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Unit main .thing img {
+  width: 500px;
+  padding: 30px;
+}
+
+.Unit main .thing span {
+  font-size: 75px;
+}
+
+.Unit main .info {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Unit main .info span {
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+
+.Unit main .info button {
+  margin: 10px;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.Unit main .info button:hover {
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+
+#cart_items {
+  background: black;
+  color: white;
+  padding: 5px;
+}
+
+#cart_stuff {
+  display: none;
+  padding: 20px;
+}
+
+#cart_stuff img {
+  width: 200px;
+}
+
+#cart_stuff #cart_stuff_inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+}
+
+#cart_stuff #cart_stuff_inside input {
+  width: 50px;
+  margin: 0px 10px;
+  padding: 10px;
+}
+
+#cart_stuff #cart_stuff_inside span {
+  font-size: 20px;
+}
+
+#checkout {
+  display: none;
 }
 /*# sourceMappingURL=index.css.map */

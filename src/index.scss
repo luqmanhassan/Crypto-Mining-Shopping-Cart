@@ -95,29 +95,30 @@ nav {
         }
       }
     }
-    // Product Component
-    section {
+    // Section
+
+    .Batteries,
+    .DataPorts,
+    .RepairKits,
+    .Cameras {
+      display: none;
+      flex-flow: row wrap;
       margin: 0px 50px;
+    }
+    .Screens {
       display: flex;
       flex-flow: row wrap;
+      margin: 0px 50px;
     }
   }
-}
-
-.Batteries,
-.DataPorts,
-.RepairKits,
-.Cameras {
-  display: none;
 }
 
 //Cart Components
 .cart {
   border: 3px solid black;
   height: 100%;
+  background: white;
   min-width: 33.3%;
-  background: white url('./images/carticon.png') no-repeat center;
-  background-size: 100px;
   display: none;
   flex-flow: column nowrap;
   justify-content: space-around;
@@ -125,10 +126,17 @@ nav {
   position: fixed;
   right: 0px;
   color: black;
-  img {
+  text-align: center;
+  button {
+    font-size: 20px;
+  }
+  .closeicon {
     width: 30px;
     align-self: flex-end;
     margin-right: 50px;
+  }
+  .carticon {
+    width: 200px;
   }
 }
 
@@ -150,4 +158,80 @@ nav {
   }
   span {
   }
+}
+
+// Unit Comp
+
+.Unit {
+  main {
+    display: flex;
+
+    .thing {
+      width: 75%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      img {
+        width: 500px;
+        padding: 30px;
+      }
+      span {
+        font-size: 75px;
+      }
+    }
+    .info {
+      width: 25%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      span {
+        margin-bottom: 30px;
+        font-size: 50px;
+      }
+      button {
+        margin: 10px;
+        font-size: 30px;
+        padding: 10px;
+        &:hover {
+          cursor: pointer;
+          background: black;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+#cart_items {
+  background: black;
+  color: white;
+  padding: 5px;
+}
+
+#cart_stuff {
+  display: none;
+  padding: 20px;
+  img {
+    width: 200px;
+  }
+  #cart_stuff_inside {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    input {
+      width: 50px;
+      margin: 0px 10px;
+      padding: 10px;
+    }
+    span {
+      font-size: 20px;
+    }
+  }
+}
+
+#checkout {
+  display: none;
 }
