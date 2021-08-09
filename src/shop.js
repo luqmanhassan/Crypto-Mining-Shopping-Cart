@@ -59,7 +59,7 @@ function Shop() {
           <h1>Products</h1>
           <span
             onClick={() => {
-              document.getElementById('Screens').style.display = 'block';
+              document.getElementById('Screens').style.display = 'flex';
               document.getElementById('Batteries').style.display = 'none';
               document.getElementById('DataPorts').style.display = 'none';
               document.getElementById('Cameras').style.display = 'none';
@@ -71,7 +71,7 @@ function Shop() {
           <span
             onClick={() => {
               document.getElementById('Screens').style.display = 'none';
-              document.getElementById('Batteries').style.display = 'block';
+              document.getElementById('Batteries').style.display = 'flex';
               document.getElementById('DataPorts').style.display = 'none';
               document.getElementById('Cameras').style.display = 'none';
               document.getElementById('RepairKits').style.display = 'none';
@@ -83,7 +83,7 @@ function Shop() {
             onClick={() => {
               document.getElementById('Screens').style.display = 'none';
               document.getElementById('Batteries').style.display = 'none';
-              document.getElementById('DataPorts').style.display = 'block';
+              document.getElementById('DataPorts').style.display = 'flex';
               document.getElementById('Cameras').style.display = 'none';
               document.getElementById('RepairKits').style.display = 'none';
             }}
@@ -95,7 +95,7 @@ function Shop() {
               document.getElementById('Screens').style.display = 'none';
               document.getElementById('Batteries').style.display = 'none';
               document.getElementById('DataPorts').style.display = 'none';
-              document.getElementById('Cameras').style.display = 'block';
+              document.getElementById('Cameras').style.display = 'flex';
               document.getElementById('RepairKits').style.display = 'none';
             }}
           >
@@ -107,19 +107,18 @@ function Shop() {
               document.getElementById('Batteries').style.display = 'none';
               document.getElementById('DataPorts').style.display = 'none';
               document.getElementById('Cameras').style.display = 'none';
-              document.getElementById('RepairKits').style.display = 'block';
+              document.getElementById('RepairKits').style.display = 'flex';
             }}
           >
             Repair Kits
           </span>
         </aside>
-        <section>
-          <Screens />
-          <Batteries />
-          <DataPorts />
-          <Cameras />
-          <RepairKits />
-        </section>
+
+        <Screens />
+        <Batteries />
+        <DataPorts />
+        <Cameras />
+        <RepairKits />
       </main>
     </div>
   );
