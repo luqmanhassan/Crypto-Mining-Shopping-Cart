@@ -1,19 +1,10 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
+import Unit from './unit.js';
 import Cart from './cart.js';
 import './index.css';
 import iphone11 from './images/iphone11.png';
 import iphone11pro from './images/iphone11pro.jpeg';
-import iphone11promax from './images/iphone11promax.jpeg';
-import iphone12 from './images/iphone12.jpeg';
-import iphone12pro from './images/iphone12pro.jpeg';
-import iphone12promax from './images/iphone12promax.jpeg';
-import iphone12mini from './images/iphone12mini.jpeg';
-import iphonese from './images/iphonese.jpeg';
-import iphonex from './images/iphonex.jpeg';
-import iphonexr from './images/iphonexr.jpeg';
-import iphonexs from './images/iphonexs.jpeg';
-import iphonexsmax from './images/iphonexsmax.jpeg';
 import kit1 from './images/kit1.jpeg';
 import kit2 from './images/kit2.jpeg';
 import xbattery from './images/xbattery.jpeg';
@@ -52,6 +43,7 @@ function Shop() {
           >
             Cart
           </span>
+          <span className="cart_items">0</span>
         </div>
       </nav>
       <main>
@@ -127,27 +119,27 @@ function Shop() {
 const Screens = () => {
   return (
     <div className="Screens" id="Screens">
-      <Product src={iphone11} alt="Iphone 11 Screen" price="150" />
-      <Product src={iphone11pro} alt="Iphone 11 Pro Screen" price="200" />
-
       <Product
-        src={iphone11promax}
-        alt="Iphone 11 Pro Max Screen"
+        src={iphone11}
+        alt="Iphone 11 Screen"
         price="150"
+        category="Screens"
       />
-      <Product src={iphonexsmax} alt="Iphone XS Max Screen" price="200" />
-      <Product src={iphonexs} alt="Iphone XS Screen" price="150" />
-      <Product src={iphonexr} alt="Iphone XR Screen" price="200" />
-      <Product src={iphonex} alt="Iphone X Screen" price="150" />
-      <Product src={iphone12} alt="Iphone 12 Screen" price="200" />
-      <Product src={iphone12pro} alt="Iphone 12 Pro Screen" price="180" />
-      <Product
-        src={iphone12promax}
-        alt="Iphone 12 Pro max Screen"
+      <Product src={iphone11pro} alt="Iphone 11 Pro Screen" price="200" />
+      <Unit
+        src={iphone11}
+        alt="Iphone 11 Screen"
+        price="150"
+        className="Unit iphone11screen"
+        id="iphone11screen"
+      />
+      <Unit
+        src={iphone11pro}
+        alt="Iphone 11 Pro Screen"
         price="200"
+        className="Unit iphone11proscreen"
+        id="iphone11proscreen"
       />
-      <Product src={iphone12mini} alt="Iphone 12 Mini Screen" price="150" />
-      <Product src={iphonese} alt="Iphone SE Screen" price="140" />
     </div>
   );
 };
@@ -189,13 +181,12 @@ const RepairKits = () => {
 };
 
 const Product = (props) => {
-  let history = useHistory();
   return (
     <div
       className="Product"
       id="Product"
-      onClick={() => {
-        history.push('/unit');
+      onClick={(ev) => {
+        ev.target.style.display = 'none';
       }}
     >
       <img src={props.src} alt={props.alt} />
