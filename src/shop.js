@@ -1,14 +1,13 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
-import Unit from './unit.js';
 import Cart from './cart.js';
 import './index.css';
 import iphone11 from './images/iphone11.png';
 import iphone11pro from './images/iphone11pro.jpeg';
-import kit1 from './images/kit1.jpeg';
-import kit2 from './images/kit2.jpeg';
 import xbattery from './images/xbattery.jpeg';
 import xrbattery from './images/xrbattery.png';
+import kit1 from './images/kit1.jpeg';
+import kit2 from './images/kit2.jpeg';
 import xdataport from './images/xdataport.jpg';
 import xrdataport from './images/xrdataport.jpg';
 import xrcamera from './images/xrcamera.jpeg';
@@ -123,22 +122,14 @@ const Screens = () => {
         src={iphone11}
         alt="Iphone 11 Screen"
         price="150"
+        unit="Unit1"
         category="Screens"
       />
-      <Product src={iphone11pro} alt="Iphone 11 Pro Screen" price="200" />
-      <Unit
-        src={iphone11}
-        alt="Iphone 11 Screen"
-        price="150"
-        className="Unit iphone11screen"
-        id="iphone11screen"
-      />
-      <Unit
+      <Product
         src={iphone11pro}
         alt="Iphone 11 Pro Screen"
+        unit="Unit2"
         price="200"
-        className="Unit iphone11proscreen"
-        id="iphone11proscreen"
       />
     </div>
   );
@@ -147,8 +138,13 @@ const Screens = () => {
 const Batteries = () => {
   return (
     <div className="Batteries" id="Batteries">
-      <Product src={xbattery} alt="Iphone X Battery" price="150" />
-      <Product src={xrbattery} alt="Iphone XR Battery" price="200" />
+      <Product src={xbattery} alt="Iphone X Battery" unit="Unit3" price="150" />
+      <Product
+        src={xrbattery}
+        alt="Iphone XR Battery"
+        unit="Unit4"
+        price="200"
+      />
     </div>
   );
 };
@@ -156,8 +152,18 @@ const Batteries = () => {
 const DataPorts = () => {
   return (
     <div className="DataPorts" id="DataPorts">
-      <Product src={xdataport} alt="Iphone X Data Port" price="150" />
-      <Product src={xrdataport} alt="Iphone XR Data Port" price="200" />
+      <Product
+        src={xdataport}
+        alt="Iphone X Data Port"
+        unit="Unit5"
+        price="150"
+      />
+      <Product
+        src={xrdataport}
+        alt="Iphone XR Data Port"
+        unit="Unit6"
+        price="200"
+      />
     </div>
   );
 };
@@ -165,8 +171,8 @@ const DataPorts = () => {
 const Cameras = () => {
   return (
     <div className="Cameras" id="Cameras">
-      <Product src={xcamera} alt="Iphone X Camera" price="150" />
-      <Product src={xrcamera} alt="Iphone XR Camera" price="200" />
+      <Product src={xcamera} alt="Iphone X Camera" unit="Unit7" price="150" />
+      <Product src={xrcamera} alt="Iphone XR Camera" unit="Unit8" price="200" />
     </div>
   );
 };
@@ -174,19 +180,25 @@ const Cameras = () => {
 const RepairKits = () => {
   return (
     <div className="RepairKits" id="RepairKits">
-      <Product src={kit1} alt="Iphone X Repair Kit" price="150" />
-      <Product src={kit2} alt="Iphone XR Repair Kit" price="200" />
+      <Product src={kit1} alt="Iphone X Repair Kit" unit="Unit9" price="150" />
+      <Product
+        src={kit2}
+        alt="Iphone XR Repair Kit"
+        unit="Unit10"
+        price="200"
+      />
     </div>
   );
 };
 
 const Product = (props) => {
+  let history = useHistory();
   return (
     <div
       className="Product"
       id="Product"
-      onClick={(ev) => {
-        ev.target.style.display = 'none';
+      onClick={() => {
+        history.push(props.unit);
       }}
     >
       <img src={props.src} alt={props.alt} />
