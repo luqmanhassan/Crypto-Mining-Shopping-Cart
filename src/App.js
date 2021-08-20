@@ -40,6 +40,7 @@ const Home = () => {
           >
             Cart
           </span>
+          <span className="cart_items">0</span>
         </div>
       </nav>
 
