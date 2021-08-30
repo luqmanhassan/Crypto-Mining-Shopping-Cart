@@ -2,16 +2,16 @@ import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import App from './App.js';
 import Shop from './shop.js';
-import Unit1 from './unit1.js';
-import Unit2 from './unit2.js';
-import Unit3 from './unit3.js';
-import Unit4 from './unit4.js';
-import Unit5 from './unit5.js';
-import Unit6 from './unit6.js';
-import Unit7 from './unit7.js';
-import Unit8 from './unit8.js';
-import Unit9 from './unit9.js';
-import Unit10 from './unit10.js';
+import Unit1 from './units/unit1.js';
+import Unit2 from './units/unit2.js';
+import Unit3 from './units/unit3.js';
+import Unit4 from './units/unit4.js';
+import Unit5 from './units/unit5.js';
+import Unit6 from './units/unit6.js';
+import Unit7 from './units/unit7.js';
+import Unit8 from './units/unit8.js';
+import Unit9 from './units/unit9.js';
+import Unit10 from './units/unit10.js';
 const Routes = () => {
   return (
     <BrowserRouter>
