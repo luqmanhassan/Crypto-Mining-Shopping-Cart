@@ -12,39 +12,12 @@ import xdataport from './images/xdataport.jpg';
 import xrdataport from './images/xrdataport.jpg';
 import xrcamera from './images/xrcamera.jpeg';
 import xcamera from './images/xcamera.jpeg';
-
+import Nav from './nav.js';
 function Shop() {
-  let history = useHistory();
   return (
     <div className="shop">
       <Cart />
-      <nav>
-        <div
-          class="logo logo_shop"
-          onClick={() => {
-            history.push('/');
-          }}
-        >
-          iFix
-        </div>
-        <div id="nav_right">
-          <span
-            onClick={() => {
-              history.push('/shop');
-            }}
-          >
-            Shop
-          </span>
-          <span
-            onClick={() => {
-              document.getElementById('cart').style.display = 'flex';
-            }}
-          >
-            Cart
-          </span>
-          <span className="cart_items">0</span>
-        </div>
-      </nav>
+      <Nav />
       <main>
         <aside>
           <h1>Products</h1>
