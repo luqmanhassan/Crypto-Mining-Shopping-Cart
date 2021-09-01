@@ -2,48 +2,15 @@ import React from 'react';
 import './index.css';
 import {useHistory} from 'react-router-dom';
 import Cart from './cart.js';
+import Nav from './nav.js';
 
 const App = () => {
+  let history = useHistory();
+
   return (
     <div className="App">
-      <Home />
-    </div>
-  );
-};
-
-const Home = () => {
-  let history = useHistory();
-  return (
-    <div className="home">
       <Cart />
-      <nav>
-        <div
-          className="logo"
-          onClick={() => {
-            history.push('/');
-          }}
-        >
-          iFix
-        </div>
-        <div id="nav_right">
-          <span
-            onClick={() => {
-              history.push('/shop');
-            }}
-          >
-            Shop
-          </span>
-          <span
-            onClick={() => {
-              document.getElementById('cart').style.display = 'flex';
-            }}
-          >
-            Cart
-          </span>
-          <span className="cart_items">0</span>
-        </div>
-      </nav>
-
+      <Nav />
       <main>
         <h1>Servicing your Electronic Repair Needs</h1>
         <button
