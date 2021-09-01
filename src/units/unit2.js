@@ -1,7 +1,9 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
-import xrcamera from './images/xrcamera.jpeg';
-const Unit8 = (props) => {
+import iphone11pro from '../images/iphone11pro.jpeg';
+import Nav from '../nav.js';
+
+const Unit2 = (props) => {
   let history = useHistory();
   function addtocart() {
     document.getElementById('cart').style.display = 'flex';
@@ -12,41 +14,15 @@ const Unit8 = (props) => {
     document.getElementsByClassName('cart_items').innerHTML = Number(x) + 1;
   }
   return (
-    <div className="Unit Unit8" id="Unit8">
-      <nav>
-        <div
-          class="logo logo_shop"
-          onClick={() => {
-            history.push('/');
-          }}
-        >
-          iFix
-        </div>
-        <div id="nav_right">
-          <span
-            onClick={() => {
-              history.push('/shop');
-            }}
-          >
-            Shop
-          </span>
-          <span
-            onClick={() => {
-              document.getElementById('cart').style.display = 'flex';
-            }}
-          >
-            Cart
-          </span>
-          <span className="cart_items">0</span>
-        </div>
-      </nav>
+    <div className="Unit Unit1" id="Unit1">
+      <Nav />
       <main>
         <div className="thing">
-          <img src={xrcamera} alt="Iphone XR Camera" />
-          <span>Iphone XR Camera </span>
+          <img src={iphone11pro} alt="Iphone 11 Pro Screen" />
+          <span>Iphone 11 Pro Screen</span>
         </div>
         <div className="info">
-          <span>$200</span>
+          <span>$180</span>
           <button onClick={addtocart}>Add To Cart</button>
           <button
             onClick={() => {
@@ -61,4 +37,4 @@ const Unit8 = (props) => {
   );
 };
 
-export default Unit8;
+export default Unit2;

@@ -1,8 +1,8 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
-import xrdataport from './images/xrdataport.jpg';
+import kit1 from '../images/kit1.jpeg';
 
-const Unit6 = (props) => {
+const Unit9 = (props) => {
   let history = useHistory();
   function addtocart() {
     document.getElementById('cart').style.display = 'flex';
@@ -13,7 +13,7 @@ const Unit6 = (props) => {
     document.getElementsByClassName('cart_items').innerHTML = Number(x) + 1;
   }
   return (
-    <div className="Unit Unit4" id="Unit4">
+    <div className="Unit Unit8" id="Unit8">
       <nav>
         <div
           class="logo logo_shop"
@@ -43,8 +43,8 @@ const Unit6 = (props) => {
       </nav>
       <main>
         <div className="thing">
-          <img src={xrdataport} alt="Iphone XR Dataport" />
-          <span>Iphone XR Dataport </span>
+          <img src={kit1} alt="kit1" />
+          <span>Kit1 </span>
         </div>
         <div className="info">
           <span>$200</span>
@@ -62,4 +62,4 @@ const Unit6 = (props) => {
   );
 };
 
-export default Unit6;
+export default Unit9;
