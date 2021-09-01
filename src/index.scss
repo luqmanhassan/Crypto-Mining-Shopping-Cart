@@ -7,7 +7,7 @@ html,
   font-family: fantasy;
 }
 // Styling For Home Component
-.home {
+.App {
   background: url('./images/board.jpg') no-repeat;
   background-size: cover;
   height: 750px;
@@ -113,33 +113,6 @@ nav {
   }
 }
 
-//Cart Components
-.cart {
-  border: 3px solid black;
-  height: 100%;
-  background: white;
-  min-width: 33.3%;
-  display: none;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: center;
-  position: fixed;
-  right: 0px;
-  color: black;
-  text-align: center;
-  button {
-    font-size: 20px;
-  }
-  .closeicon {
-    width: 30px;
-    align-self: flex-end;
-    margin-right: 50px;
-  }
-  .carticon {
-    width: 200px;
-  }
-}
-
 // Product Component
 .Product {
   display: flex;
@@ -155,8 +128,6 @@ nav {
   img {
     width: 200px;
     padding: 20px;
-  }
-  span {
   }
 }
 
@@ -203,35 +174,64 @@ nav {
   }
 }
 
-#cart_items {
-  background: black;
-  color: white;
-  padding: 5px;
-}
-
-#cart_stuff {
+//Cart Components
+.cart {
+  border: 5px solid black;
+  height: 100%;
+  background: white;
+  min-width: 33.3%;
   display: none;
-  padding: 20px;
-  img {
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  right: 0px;
+  color: black;
+  text-align: center;
+  button {
+    font-size: 20px;
+  }
+  .closeicon {
+    width: 30px;
+    align-self: flex-end;
+    margin-right: 50px;
+  }
+  .carticon {
     width: 200px;
   }
-  #cart_stuff_inside {
+}
+
+.cart_stuff {
+  padding: 20px;
+  display: flex;
+  #stuff1 {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
     align-items: center;
-    font-size: 20px;
+    justify-content: center;
+    img {
+      width: 100px;
+    }
+  }
+
+  #stuff2 {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
     input {
       width: 50px;
       margin: 0px 10px;
       padding: 10px;
     }
     span {
-      font-size: 20px;
+      font-size: 30px;
     }
   }
 }
 
-#checkout {
-  display: none;
+#sticky {
+  background: black;
+  color: white;
+  padding: 5px;
 }
