@@ -258,6 +258,8 @@ nav #nav_right span:hover {
   right: 0px;
   color: black;
   text-align: center;
+  overflow: scroll;
+  padding: 20px;
 }
 
 .cart button {
