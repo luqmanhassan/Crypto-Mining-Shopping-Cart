@@ -102,7 +102,7 @@ const Screens = () => {
         src={iphone11pro}
         alt="Iphone 11 Pro Screen"
         unit="Unit2"
-        price="200"
+        price="150"
       />
     </div>
   );
@@ -111,12 +111,12 @@ const Screens = () => {
 const Batteries = () => {
   return (
     <div className="Batteries" id="Batteries">
-      <Product src={xbattery} alt="Iphone X Battery" unit="Unit3" price="150" />
+      <Product src={xbattery} alt="Iphone X Battery" unit="Unit3" price="60" />
       <Product
         src={xrbattery}
         alt="Iphone XR Battery"
         unit="Unit4"
-        price="200"
+        price="60"
       />
     </div>
   );
@@ -129,13 +129,13 @@ const DataPorts = () => {
         src={xdataport}
         alt="Iphone X Data Port"
         unit="Unit5"
-        price="150"
+        price="100"
       />
       <Product
         src={xrdataport}
         alt="Iphone XR Data Port"
         unit="Unit6"
-        price="200"
+        price="100"
       />
     </div>
   );
@@ -144,8 +144,8 @@ const DataPorts = () => {
 const Cameras = () => {
   return (
     <div className="Cameras" id="Cameras">
-      <Product src={xcamera} alt="Iphone X Camera" unit="Unit7" price="150" />
-      <Product src={xrcamera} alt="Iphone XR Camera" unit="Unit8" price="200" />
+      <Product src={xcamera} alt="Iphone X Camera" unit="Unit7" price="130" />
+      <Product src={xrcamera} alt="Iphone XR Camera" unit="Unit8" price="130" />
     </div>
   );
 };
@@ -153,13 +153,8 @@ const Cameras = () => {
 const RepairKits = () => {
   return (
     <div className="RepairKits" id="RepairKits">
-      <Product src={kit1} alt="Iphone X Repair Kit" unit="Unit9" price="150" />
-      <Product
-        src={kit2}
-        alt="Iphone XR Repair Kit"
-        unit="Unit10"
-        price="200"
-      />
+      <Product src={kit1} alt="Iphone X Repair Kit" unit="Unit9" price="50" />
+      <Product src={kit2} alt="Iphone XR Repair Kit" unit="Unit10" price="50" />
     </div>
   );
 };
