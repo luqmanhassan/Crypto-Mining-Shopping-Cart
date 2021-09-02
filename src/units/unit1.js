@@ -23,6 +23,7 @@ const Unit1 = (props) => {
             onClick={() => {
               dispatch({type: 'unit1_add'});
               dispatch({type: 'counter_add'});
+
               document.getElementById('cart').style.display = 'flex';
             }}
           >
