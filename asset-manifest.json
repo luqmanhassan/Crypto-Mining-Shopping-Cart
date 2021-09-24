@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Shopping-Cart/static/css/main.465b3009.chunk.css",
+    "main.js": "/Shopping-Cart/static/js/main.bb95dde8.chunk.js",
+    "main.js.map": "/Shopping-Cart/static/js/main.bb95dde8.chunk.js.map",
+    "runtime-main.js": "/Shopping-Cart/static/js/runtime-main.4e1f850d.js",
+    "runtime-main.js.map": "/Shopping-Cart/static/js/runtime-main.4e1f850d.js.map",
+    "static/js/2.96eea951.chunk.js": "/Shopping-Cart/static/js/2.96eea951.chunk.js",
+    "static/js/2.96eea951.chunk.js.map": "/Shopping-Cart/static/js/2.96eea951.chunk.js.map",
+    "index.html": "/Shopping-Cart/index.html",
+    "static/css/main.465b3009.chunk.css.map": "/Shopping-Cart/static/css/main.465b3009.chunk.css.map",
+    "static/js/2.96eea951.chunk.js.LICENSE.txt": "/Shopping-Cart/static/js/2.96eea951.chunk.js.LICENSE.txt",
+    "static/media/board.c15c72d3.jpg": "/Shopping-Cart/static/media/board.c15c72d3.jpg",
+    "static/media/carticon.19c60e8b.png": "/Shopping-Cart/static/media/carticon.19c60e8b.png",
+    "static/media/iphone11.e74463b7.png": "/Shopping-Cart/static/media/iphone11.e74463b7.png",
+    "static/media/iphone11pro.8ef45881.jpeg": "/Shopping-Cart/static/media/iphone11pro.8ef45881.jpeg",
+    "static/media/kit1.e10f46e5.jpeg": "/Shopping-Cart/static/media/kit1.e10f46e5.jpeg",
+    "static/media/kit2.c9819a47.jpeg": "/Shopping-Cart/static/media/kit2.c9819a47.jpeg",
+    "static/media/xbattery.2572d6c7.jpeg": "/Shopping-Cart/static/media/xbattery.2572d6c7.jpeg",
+    "static/media/xcamera.e0a6f79d.jpeg": "/Shopping-Cart/static/media/xcamera.e0a6f79d.jpeg",
+    "static/media/xdataport.3a7ca8d5.jpg": "/Shopping-Cart/static/media/xdataport.3a7ca8d5.jpg",
+    "static/media/xrbattery.3ce23553.png": "/Shopping-Cart/static/media/xrbattery.3ce23553.png",
+    "static/media/xrcamera.7a4904c9.jpeg": "/Shopping-Cart/static/media/xrcamera.7a4904c9.jpeg",
+    "static/media/xrdataport.1364b45c.jpg": "/Shopping-Cart/static/media/xrdataport.1364b45c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4e1f850d.js",
+    "static/js/2.96eea951.chunk.js",
+    "static/css/main.465b3009.chunk.css",
+    "static/js/main.bb95dde8.chunk.js"
+  ]
+}
