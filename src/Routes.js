@@ -16,18 +16,58 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={App} />
-        <Route path="/shop" exact component={Shop} />
-        <Route path="/unit1" exact component={Unit1} />
-        <Route path="/unit2" exact component={Unit2} />
-        <Route path="/unit3" exact component={Unit3} />
-        <Route path="/unit4" exact component={Unit4} />
-        <Route path="/unit5" exact component={Unit5} />
-        <Route path="/unit6" exact component={Unit6} />
-        <Route path="/unit7" exact component={Unit7} />
-        <Route path="/unit8" exact component={Unit8} />
-        <Route path="/unit9" exact component={Unit9} />
-        <Route path="/unit10" exact component={Unit10} />
+        <Route path={process.env.PUBLIC_URL + '/'} component={App} />
+        <Route path={process.env.PUBLIC_URL + '/shop'} exact component={Shop} />
+        <Route
+          path={process.env.PUBLIC_URL + '/unit1'}
+          exact
+          component={Unit1}
+        />
+        <Route
+          path={process.env.PUBLIC_URL + '/unit2'}
+          exact
+          component={Unit2}
+        />
+        <Route
+          path={process.env.PUBLIC_URL + '/unit3'}
+          exact
+          component={Unit3}
+        />
+        <Route
+          path={process.env.PUBLIC_URL + '/unit4'}
+          exact
+          component={Unit4}
+        />
+        <Route
+          path={process.env.PUBLIC_URL + '/unit5'}
+          exact
+          component={Unit5}
+        />
+        <Route
+          path={process.env.PUBLIC_URL + '/unit6'}
+          exact
+          component={Unit6}
+        />
+        <Route
+          path={process.env.PUBLIC_URL + '/unit7'}
+          exact
+          component={Unit7}
+        />
+        <Route
+          path={process.env.PUBLIC_URL + '/unit8'}
+          exact
+          component={Unit8}
+        />
+        <Route
+          path={process.env.PUBLIC_URL + '/unit9'}
+          exact
+          component={Unit9}
+        />
+        <Route
+          path={process.env.PUBLIC_URL + '/unit10'}
+          exact
+          component={Unit10}
+        />
       </Switch>
     </BrowserRouter>
   );
