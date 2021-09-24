@@ -85,19 +85,18 @@ function Cart(props) {
       open
     >
       <Grid
-        // container
         item
         direction="column"
         align="center"
-        spacing={6}
         sx={{
           border: '5px solid black',
           backgroundColor: 'white',
           p: '30px',
           overflow: 'auto',
+          height: '100%',
         }}
       >
-        <Grid item align="start">
+        <Grid item align="start" my="10px">
           <img
             src={close}
             alt="close icon"
@@ -108,14 +107,14 @@ function Cart(props) {
             }}
           />
         </Grid>
-        <Grid item>
+        <Grid item my="10px">
           <Typography variant="h3" color="black">
             Your Shopping Bag
           </Typography>
         </Grid>
 
         {counter === 0 && (
-          <Grid item id="emptybag">
+          <Grid item id="emptybag" my="10px">
             <Typography variant="h6" color="black">
               Your bag is empty.
             </Typography>
@@ -321,7 +320,7 @@ function Cart(props) {
         )}
 
         {counter > 0 && (
-          <Grid item id="checkout">
+          <Grid item id="checkout" my="10px">
             <Typography variant="h6" color="black">
               Total:
               {_unit1 * 150 +
@@ -347,7 +346,7 @@ function Cart(props) {
           </Grid>
         )}
 
-        <Grid item>
+        <Grid item my="20px">
           <Button
             variant="contained"
             onClick={() => {
