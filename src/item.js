@@ -16,6 +16,7 @@ const Item = (props) => {
       direction="column"
       id={props.id}
       align="center"
+      my="20px"
     >
       <Grid item align="center">
         <img src={props.src} width="100px" alt={props.alt} />

@@ -60,7 +60,6 @@ export default function Nav(props) {
           <Button
             onClick={() => {
               document.getElementById('cart').style.display = 'flex';
-              //  history.push('/cart');
             }}
             sx={{
               fontSize: '20px',
@@ -70,7 +69,10 @@ export default function Nav(props) {
             Cart
           </Button>
           {counter > 0 && (
-            <Typography variant="body1">
+            <Typography
+              variant="body1"
+              sx={{color: props.home ? 'white' : 'primary.main'}}
+            >
               {u1 + u2 + u3 + u4 + u5 + u6 + u7 + u8 + u9 + u10}
             </Typography>
           )}
