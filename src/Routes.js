@@ -16,7 +16,7 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={App} />
+        <Route path="/" component={App} />
         <Route path="/shop" exact component={Shop} />
         <Route path="/unit1" exact component={Unit1} />
         <Route path="/unit2" exact component={Unit2} />
@@ -28,7 +28,6 @@ const Routes = () => {
         <Route path="/unit8" exact component={Unit8} />
         <Route path="/unit9" exact component={Unit9} />
         <Route path="/unit10" exact component={Unit10} />
-        <Route path="/" render={() => <div>404</div>} />
       </Switch>
     </BrowserRouter>
   );
