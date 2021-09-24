@@ -1,38 +1,57 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
-
+import {Grid, Button, ButtonGroup, Typography, IconButton} from '@mui/material';
+import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
+import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 const Item = (props) => {
   const type1 = props.type1;
   const type2 = props.type2;
   const dispatch = useDispatch();
 
   return (
-    <div id={props.id} className="cart_stuff">
-      <div id="stuff1">
-        <img src={props.src} alt={props.alt} />
-        <p>{props.alt}</p>
-        <p>{props.price}</p>
-      </div>
+    <Grid
+      item
+      container
+      spacing={1}
+      direction="column"
+      id={props.id}
+      align="center"
+    >
+      <Grid item align="center">
+        <img src={props.src} width="100px" alt={props.alt} />
+      </Grid>
+      <Grid item align="center">
+        <Typography variant="body1" color="black">
+          {props.alt}
+        </Typography>
+      </Grid>
+      <Grid item align="center">
+        <Typography variant="body1" color="black">
+          {props.price}
+        </Typography>
+      </Grid>
 
-      <div id="stuff2">
-        <span
-          onClick={() => {
-            dispatch({type: type2});
-          }}
-        >
-          -
-        </span>
-        {props.children}
+      <Grid item id="stuff2">
+        <ButtonGroup>
+          <IconButton
+            onClick={() => {
+              dispatch({type: type2});
+            }}
+          >
+            <RemoveOutlinedIcon />
+          </IconButton>
+          {props.children}
 
-        <span
-          onClick={() => {
-            dispatch({type: type1});
-          }}
-        >
-          +
-        </span>
-      </div>
-    </div>
+          <IconButton
+            onClick={() => {
+              dispatch({type: type1});
+            }}
+          >
+            <AddOutlinedIcon />
+          </IconButton>
+        </ButtonGroup>
+      </Grid>
+    </Grid>
   );
 };
 export default Item;
