@@ -1,8 +1,8 @@
 import {useHistory} from 'react-router-dom';
 import {useSelector} from 'react-redux';
+import {AppBar, ButtonGroup, Button, Typography, Toolbar} from '@mui/material';
 
-export default function Nav() {
-  //  const counter = useSelector((state) => state.counter);
+export default function Nav(props) {
   let history = useHistory();
   const counter = useSelector((state) => state.counter);
   const _unit1 = useSelector((state) => state.unit1);
@@ -27,38 +27,55 @@ export default function Nav() {
   let u10 = _unit10 > 0 ? 1 : 0;
 
   return (
-    <div>
-      <nav>
-        <div
-          className="logo"
+    <AppBar
+      sx={{
+        backgroundColor: props.home ? 'transparent' : 'black',
+        p: '10px',
+        color: props.home ? 'white' : 'primary.main',
+      }}
+      position="sticky"
+    >
+      <Toolbar sx={{display: 'flex', justifyContent: 'space-between'}}>
+        <Typography
+          variant="h3"
+          ml="50px"
           onClick={() => {
             history.push('/');
           }}
         >
-          iFix
-        </div>
-        <div id="nav_right">
-          <span
+          IFix
+        </Typography>
+        <ButtonGroup variant="text" size="large">
+          <Button
             onClick={() => {
               history.push('/shop');
             }}
+            sx={{
+              fontSize: '20px',
+              color: props.home ? 'white' : 'primary.main',
+            }}
           >
             Shop
-          </span>
-          <span
+          </Button>
+          <Button
             onClick={() => {
               document.getElementById('cart').style.display = 'flex';
+              //  history.push('/cart');
+            }}
+            sx={{
+              fontSize: '20px',
+              color: props.home ? 'white' : 'primary.main',
             }}
           >
             Cart
-          </span>
+          </Button>
           {counter > 0 && (
-            <span className="sticky">
+            <Typography variant="body1">
               {u1 + u2 + u3 + u4 + u5 + u6 + u7 + u8 + u9 + u10}
-            </span>
+            </Typography>
           )}
-        </div>
-      </nav>
-    </div>
+        </ButtonGroup>
+      </Toolbar>
+    </AppBar>
   );
 }
