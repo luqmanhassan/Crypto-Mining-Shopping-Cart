@@ -1,7 +1,7 @@
 import React from 'react';
-import {useHistory} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import Cart from './cart.js';
-import './index.css';
+import './styles/index.css';
 import iphone11 from './images/iphone11.png';
 import iphone11pro from './images/iphone11pro.jpeg';
 import xbattery from './images/xbattery.jpeg';
@@ -200,18 +200,21 @@ const RepairKits = () => {
 };
 
 const Product = (props) => {
-  let history = useHistory();
+  let navigate = useNavigate();
   return (
     <Grid
       item
       className="Product"
       id="Product"
       onClick={() => {
-        history.push(props.unit);
+        navigate(`/` + props.unit);
       }}
       direction="center"
       align="center"
       mx="10px"
+      sx={{
+        p: '50px',
+      }}
     >
       <img src={props.src} alt={props.alt} width="300px" />
       <Typography variant="h6">{props.alt}</Typography>

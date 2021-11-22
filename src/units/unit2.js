@@ -1,5 +1,5 @@
 import React from 'react';
-import {useHistory} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import iphone11pro from '../images/iphone11pro.jpeg';
 import Nav from '../nav.js';
 import {useDispatch} from 'react-redux';
@@ -7,7 +7,7 @@ import Cart from '../cart.js';
 import {Grid, Button, Typography, ButtonGroup} from '@mui/material';
 
 const Unit2 = (props) => {
-  let history = useHistory();
+  let navigate = useNavigate();
   const dispatch = useDispatch();
   return (
     <Grid container id="Unit1">
@@ -43,7 +43,7 @@ const Unit2 = (props) => {
             </Button>
             <Button
               onClick={() => {
-                history.push('/shop');
+                navigate(`/shop`);
               }}
             >
               Go Back

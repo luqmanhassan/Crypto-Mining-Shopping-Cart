@@ -1,9 +1,9 @@
-import {useHistory} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import {AppBar, ButtonGroup, Button, Typography, Toolbar} from '@mui/material';
 
 export default function Nav(props) {
-  let history = useHistory();
+  let navigate = useNavigate();
   const counter = useSelector((state) => state.counter);
   const _unit1 = useSelector((state) => state.unit1);
   const _unit2 = useSelector((state) => state.unit2);
@@ -29,7 +29,7 @@ export default function Nav(props) {
   return (
     <AppBar
       sx={{
-        backgroundColor: props.home ? 'transparent' : 'black',
+        backgroundColor: props.home ? 'transparent' : 'white',
         p: '10px',
         color: props.home ? 'white' : 'primary.main',
       }}
@@ -40,7 +40,7 @@ export default function Nav(props) {
           variant="h3"
           ml="50px"
           onClick={() => {
-            history.push('/');
+            navigate(`/`);
           }}
         >
           IFix
@@ -48,7 +48,7 @@ export default function Nav(props) {
         <ButtonGroup variant="text" size="large">
           <Button
             onClick={() => {
-              history.push('/shop');
+              navigate(`/shop`);
             }}
             sx={{
               fontSize: '20px',

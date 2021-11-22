@@ -1,5 +1,5 @@
 import React from 'react';
-import {useHistory} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import kit2 from '../images/kit2.jpeg';
 import Nav from '../nav.js';
 import {useDispatch} from 'react-redux';
@@ -7,7 +7,7 @@ import Cart from '../cart.js';
 import {Grid, Button, Typography, ButtonGroup} from '@mui/material';
 
 const Unit10 = (props) => {
-  let history = useHistory();
+  let navigate = useNavigate();
   const dispatch = useDispatch();
   return (
     <Grid container id="Unit10">
@@ -44,7 +44,7 @@ const Unit10 = (props) => {
             </Button>
             <Button
               onClick={() => {
-                history.push('/shop');
+                navigate(`/shop`);
               }}
             >
               Go Back

@@ -1,6 +1,5 @@
-import React from 'react';
-import './index.css';
-import {useHistory} from 'react-router-dom';
+import './styles/index.css';
+import {useNavigate} from 'react-router-dom';
 import Cart from './cart.js';
 import Nav from './nav.js';
 import {Grid, Button, Typography} from '@mui/material';
@@ -20,7 +19,7 @@ const theme = createTheme({
   },
 });
 const App = () => {
-  let history = useHistory();
+  let navigate = useNavigate();
 
   return (
     <ThemeProvider theme={theme}>
@@ -56,7 +55,7 @@ const App = () => {
             variant="contained"
             sx={{fontSize: '25px', color: 'black', bgcolor: 'white'}}
             onClick={() => {
-              history.push('/shop');
+              navigate(`/shop`);
             }}
           >
             Shop Now

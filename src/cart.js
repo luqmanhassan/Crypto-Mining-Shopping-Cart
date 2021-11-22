@@ -1,5 +1,5 @@
 import React from 'react';
-import {useHistory} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import close from './images/close.png';
 import carticon from './images/carticon.png';
 import {useSelector, useDispatch} from 'react-redux';
@@ -17,7 +17,7 @@ import xcamera from './images/xcamera.jpeg';
 import {Grid, Button, Typography, Backdrop, TextField} from '@mui/material';
 
 function Cart(props) {
-  let history = useHistory();
+  let navigate = useNavigate();
   const dispatch = useDispatch();
   const counter = useSelector((state) => state.counter);
   const _unit1 = useSelector((state) => state.unit1);
@@ -30,49 +30,7 @@ function Cart(props) {
   const _unit8 = useSelector((state) => state.unit8);
   const _unit9 = useSelector((state) => state.unit9);
   const _unit10 = useSelector((state) => state.unit10);
-  /* const grandOBJ = [
-    [
-      _unit1,
-      '_unit1',
-      {iphone11},
-      '150',
-      'Iphone 11',
-      'unit1_add',
-      'unit1_minus',
-      'unit1change',
-    ],
-    [
-      _unit2,
-      '_unit2',
-      {iphone11pro},
-      '150',
-      'Iphone 11 Pro',
-      'unit2_add',
-      'unit2_minus',
-      'unit2change',
-    ],
-    [
-      _unit3,
-      '_unit3',
-      {xbattery},
-      '60',
-      'Iphone X Battery',
-      'unit3_add',
-      'unit3_minus',
-      'unit3change',
-    ],
-    [
-      _unit4,
-      '_unit4',
-      {xrbattery},
-      '60',
-      'Iphone X Battery',
-      'unit4_add',
-      'unit4_minus',
-      'unit4change',
-    ],
-  ];
-*/
+
   return (
     <Backdrop
       id="cart"
@@ -337,7 +295,7 @@ function Cart(props) {
             <Button
               variant="contained"
               onClick={() => {
-                history.push('/');
+                navigate(`/`);
                 document.getElementById('cart').style.display = 'none';
               }}
             >
@@ -350,7 +308,7 @@ function Cart(props) {
           <Button
             variant="contained"
             onClick={() => {
-              history.push('/shop');
+              navigate(`/shop`);
               document.getElementById('cart').style.display = 'none';
             }}
           >
