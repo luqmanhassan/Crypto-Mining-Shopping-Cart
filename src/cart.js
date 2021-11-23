@@ -4,16 +4,16 @@ import close from './images/close.png';
 import carticon from './images/carticon.png';
 import {useSelector, useDispatch} from 'react-redux';
 import Item from './item.js';
-import iphone11 from './images/iphone11.png';
-import iphone11pro from './images/iphone11pro.jpeg';
-import xbattery from './images/xbattery.jpeg';
-import xrbattery from './images/xrbattery.png';
-import kit1 from './images/kit1.jpeg';
-import kit2 from './images/kit2.jpeg';
-import xdataport from './images/xdataport.jpg';
-import xrdataport from './images/xrdataport.jpg';
-import xrcamera from './images/xrcamera.jpeg';
-import xcamera from './images/xcamera.jpeg';
+import btc1 from './images/btc1.jpg';
+import btc2 from './images/btc2.jpeg';
+import eth1 from './images/eth1.jpeg';
+import eth2 from './images/eth2.jpeg';
+import mon1 from './images/mon1.jpeg';
+import mon2 from './images/mon2.jpg';
+import lit1 from './images/lit1.jpeg';
+import lit2 from './images/lit2.jpg';
+import rav1 from './images/rav1.jpeg';
+import rav2 from './images/rav2.jpg';
 import {Grid, Button, Typography, Backdrop, TextField} from '@mui/material';
 
 function Cart(props) {
@@ -88,9 +88,9 @@ function Cart(props) {
         {_unit1 > 0 && (
           <Item
             id="_unit1"
-            src={iphone11}
-            price="150"
-            alt="Iphone 11"
+            src={btc1}
+            price="2000"
+            alt="BTC Rig 1"
             type1="unit1_add"
             type2="unit1_minus"
           >
@@ -108,9 +108,9 @@ function Cart(props) {
         {_unit2 > 0 && (
           <Item
             id="_unit2"
-            src={iphone11pro}
-            price="150"
-            alt="Iphone 11 Pro"
+            src={btc2}
+            price="2500"
+            alt="BTC Rig 2"
             type1="unit2_add"
             type2="unit2_minus"
           >
@@ -127,9 +127,9 @@ function Cart(props) {
         {_unit3 > 0 && (
           <Item
             id="_unit3"
-            src={xbattery}
-            price="60"
-            alt="Iphone X Battery"
+            src={eth1}
+            price="3000"
+            alt="Eth Rig 1"
             type1="unit3_add"
             type2="unit3_minus"
           >
@@ -146,9 +146,9 @@ function Cart(props) {
         {_unit4 > 0 && (
           <Item
             id="_unit4"
-            src={xrbattery}
-            price="150"
-            alt="Iphone XR Battery"
+            src={eth2}
+            price="3500"
+            alt="Eth Rig 2"
             type1="unit4_add"
             type2="unit4_minus"
           >
@@ -165,9 +165,9 @@ function Cart(props) {
         {_unit5 > 0 && (
           <Item
             id="_unit5"
-            src={xdataport}
-            price="100"
-            alt="Iphone X Dataport"
+            src={mon1}
+            price="4000"
+            alt="Mon Rig 1"
             type1="unit5_add"
             type2="unit5_minus"
           >
@@ -184,9 +184,9 @@ function Cart(props) {
         {_unit6 > 0 && (
           <Item
             id="_unit6"
-            src={xrdataport}
-            price="100"
-            alt="Iphone XR Dataport"
+            src={mon2}
+            price="4500"
+            alt="Mon Rig 2"
             type1="unit6_add"
             type2="unit6_minus"
           >
@@ -203,9 +203,9 @@ function Cart(props) {
         {_unit7 > 0 && (
           <Item
             id="_unit7"
-            src={xcamera}
-            price="130"
-            alt="Iphone X Camera"
+            src={lit1}
+            price="5000"
+            alt="Lit Rig 1"
             type1="unit7_add"
             type2="unit7_minus"
           >
@@ -222,9 +222,9 @@ function Cart(props) {
         {_unit8 > 0 && (
           <Item
             id="_unit8"
-            src={xrcamera}
-            price="130"
-            alt="Iphone XR Camera"
+            src={lit2}
+            price="5500"
+            alt="Lit Rig 2"
             type1="unit8_add"
             type2="unit8_minus"
           >
@@ -241,9 +241,9 @@ function Cart(props) {
         {_unit9 > 0 && (
           <Item
             id="_kit1"
-            src={kit1}
-            price="50"
-            alt="Kit 1"
+            src={rav1}
+            price="6000"
+            alt="Rav Rig 1"
             type1="unit9_add"
             type2="unit9_minus"
           >
@@ -260,9 +260,9 @@ function Cart(props) {
         {_unit10 > 0 && (
           <Item
             id="_kit2"
-            src={kit2}
-            price="50"
-            alt="Kit 2"
+            src={rav2}
+            price="6500"
+            alt="Rav Rig 2"
             type1="unit10_add"
             type2="unit10_minus"
           >
@@ -281,16 +281,16 @@ function Cart(props) {
           <Grid item id="checkout" my="10px">
             <Typography variant="h6" color="black">
               Total:
-              {_unit1 * 150 +
-                _unit2 * 150 +
-                _unit3 * 60 +
-                _unit4 * 60 +
-                _unit5 * 100 +
-                _unit6 * 100 +
-                _unit7 * 130 +
-                _unit8 * 130 +
-                _unit9 * 50 +
-                _unit10 * 50}
+              {_unit1 * 2000 +
+                _unit2 * 2500 +
+                _unit3 * 3000 +
+                _unit4 * 3500 +
+                _unit5 * 4000 +
+                _unit6 * 4500 +
+                _unit7 * 5000 +
+                _unit8 * 5500 +
+                _unit9 * 6000 +
+                _unit10 * 6500}
             </Typography>
             <Button
               variant="contained"

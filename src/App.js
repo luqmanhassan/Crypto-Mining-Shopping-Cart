@@ -47,7 +47,7 @@ const App = () => {
               my: '50px',
             }}
           >
-            Electronic Repair Parts For Cheap
+            Crypto Mining Rigs
           </Typography>
         </Grid>
         <Grid item align="center">

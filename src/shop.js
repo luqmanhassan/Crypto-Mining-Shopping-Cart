@@ -2,25 +2,19 @@ import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import Cart from './cart.js';
 import './styles/index.css';
-import iphone11 from './images/iphone11.png';
-import iphone11pro from './images/iphone11pro.jpeg';
-import xbattery from './images/xbattery.jpeg';
-import xrbattery from './images/xrbattery.png';
-import kit1 from './images/kit1.jpeg';
-import kit2 from './images/kit2.jpeg';
-import xdataport from './images/xdataport.jpg';
-import xrdataport from './images/xrdataport.jpg';
-import xrcamera from './images/xrcamera.jpeg';
-import xcamera from './images/xcamera.jpeg';
+import btc1 from './images/btc1.jpg';
+import btc2 from './images/btc2.jpeg';
+import eth1 from './images/eth1.jpeg';
+import eth2 from './images/eth2.jpeg';
+import mon1 from './images/mon1.jpeg';
+import mon2 from './images/mon2.jpg';
+import lit1 from './images/lit1.jpeg';
+import lit2 from './images/lit2.jpg';
+import rav1 from './images/rav1.jpeg';
+import rav2 from './images/rav2.jpg';
 import Nav from './nav.js';
 import {Grid, Button, Typography} from '@mui/material';
-const selections = [
-  'Screens',
-  'Batteries',
-  'DataPorts',
-  'Cameras',
-  'RepairKits',
-];
+const selections = ['Bitcoin', 'Ethereum', 'Monacoin', 'Litecoin', 'Ravencoin'];
 function toggle(select) {
   for (let i = 0; i < selections.length; i++) {
     if (selections[i] === select) {
@@ -49,152 +43,132 @@ function Shop() {
           </Typography>
           <Button
             onClick={() => {
-              toggle('Screens');
+              toggle('Bitcoin');
             }}
             sx={{color: 'black'}}
           >
-            Screens
+            Bitcoin
           </Button>
           <Button
             onClick={() => {
-              toggle('Batteries');
+              toggle('Ethereum');
             }}
             sx={{color: 'black'}}
           >
-            Batteries
+            Ethereum
           </Button>
           <Button
             onClick={() => {
-              toggle('DataPorts');
+              toggle('Monacoin');
             }}
             sx={{color: 'black'}}
           >
-            Data Ports
+            Monacoin
           </Button>
           <Button
             onClick={() => {
-              toggle('Cameras');
+              toggle('Litecoin');
             }}
             sx={{color: 'black'}}
           >
-            Cameras
+            Litecoin
           </Button>
           <Button
             onClick={() => {
-              toggle('RepairKits');
+              toggle('Ravencoin');
             }}
             sx={{color: 'black'}}
           >
-            Repair Kits
+            Ravencoin
           </Button>
         </Grid>
 
-        <Screens />
-        <Batteries />
-        <DataPorts />
-        <Cameras />
-        <RepairKits />
+        <Bitcoin />
+        <Ethereum />
+        <Monacoin />
+        <Litecoin />
+        <Ravencoin />
       </Grid>
     </Grid>
   );
 }
 
-const Screens = () => {
+const Bitcoin = () => {
   return (
     <Grid
       item
-      className="Screens"
-      id="Screens"
+      className="Bitcoin"
+      id="Bitcoin"
       sx={{display: 'flex', pt: '100px', ml: '100px'}}
     >
       <Product
-        src={iphone11}
-        alt="Iphone 11 Screen"
-        price="150"
+        src={btc1}
+        alt="BTC Rig 1"
+        price="2000"
         unit="Unit1"
-        category="Screens"
+        category="Bitcoin"
       />
-      <Product
-        src={iphone11pro}
-        alt="Iphone 11 Pro Screen"
-        unit="Unit2"
-        price="150"
-      />
+      <Product src={btc2} alt="BTC RIg 2" unit="Unit2" price="2500" />
     </Grid>
   );
 };
 
-const Batteries = () => {
+const Ethereum = () => {
   return (
     <Grid
       item
       container
-      className="Batteries"
-      id="Batteries"
+      className="Ethereum"
+      id="Ethereum"
       sx={{display: 'none', pt: '100px', ml: '100px'}}
     >
-      <Product src={xbattery} alt="Iphone X Battery" unit="Unit3" price="60" />
-      <Product
-        src={xrbattery}
-        alt="Iphone XR Battery"
-        unit="Unit4"
-        price="60"
-      />
+      <Product src={eth1} alt="Eth Rig 1" unit="Unit3" price="3000" />
+      <Product src={eth2} alt="Eth Rig 2" unit="Unit4" price="3500" />
     </Grid>
   );
 };
 
-const DataPorts = () => {
+const Monacoin = () => {
   return (
     <Grid
       item
       container
-      className="DataPorts"
-      id="DataPorts"
+      className="Monacoin"
+      id="Monacoin"
       sx={{display: 'none', pt: '100px', ml: '100px'}}
     >
-      <Product
-        src={xdataport}
-        alt="Iphone X Data Port"
-        unit="Unit5"
-        price="100"
-      />
-      <Product
-        src={xrdataport}
-        alt="Iphone XR Data Port"
-        unit="Unit6"
-        price="100"
-      />
+      <Product src={mon1} alt="Mon Rig 1" unit="Unit5" price="4000" />
+      <Product src={mon2} alt="Mon Rig 2" unit="Unit6" price="4500" />
     </Grid>
   );
 };
 
-const Cameras = () => {
+const Litecoin = () => {
   return (
     <Grid
       item
       container
-      className="Cameras"
-      id="Cameras"
+      className="Litecoin"
+      id="Litecoin"
       sx={{display: 'none', pt: '100px', ml: '100px'}}
     >
-      <Product src={xcamera} alt="Iphone X Camera" unit="Unit7" price="130" />
-      <Product src={xrcamera} alt="Iphone XR Camera" unit="Unit8" price="130" />
+      <Product src={lit1} alt="Lit Rig 1" unit="Unit7" price="5000" />
+      <Product src={lit2} alt="Lit Rig 2" unit="Unit8" price="5500" />
     </Grid>
   );
 };
 
-const RepairKits = () => {
+const Ravencoin = () => {
   return (
     <Grid
       item
       container
-      className="RepairKits"
-      id="RepairKits"
+      className="Ravencoin"
+      id="Ravencoin"
       sx={{display: 'none', pt: '100px', ml: '100px'}}
     >
-      <Product src={kit1} alt="Iphone X Repair Kit" unit="Unit9" price="50" />
-      <Product src={kit2} alt="Iphone XR Repair Kit" unit="Unit10" price="50" />
+      <Product src={rav1} alt="Rav Rig 1" unit="Unit9" price="6000" />
+      <Product src={rav2} alt="Rav Rig 2" unit="Unit10" price="6500" />
     </Grid>
   );
 };

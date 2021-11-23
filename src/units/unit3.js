@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
-import xbattery from '../images/xbattery.jpeg';
+import eth1 from '../images/eth1.jpeg';
 import Nav from '../nav.js';
 import {useDispatch} from 'react-redux';
 import Cart from '../cart.js';
@@ -24,12 +24,12 @@ const Unit3 = (props) => {
         }}
       >
         <Grid item>
-          <img src={xbattery} width="500px" alt="Iphone X Battery" />
+          <img src={eth1} width="500px" alt="Iphone X Battery" />
         </Grid>
         <Grid item align="center">
-          <Typography variant="h3">Iphone X Battery</Typography>
+          <Typography variant="h3">ETH Rig 1</Typography>
           <Typography variant="h5" my="20px">
-            $60
+            $3000
           </Typography>
           <ButtonGroup>
             <Button

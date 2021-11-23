@@ -43,7 +43,7 @@ export default function Nav(props) {
             navigate(`/`);
           }}
         >
-          IFix
+          ICrypto
         </Typography>
         <ButtonGroup variant="text" size="large">
           <Button

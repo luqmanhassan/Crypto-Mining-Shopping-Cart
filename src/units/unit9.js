@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
-import kit1 from '../images/kit1.jpeg';
+import rav1 from '../images/rav1.jpeg';
 import Nav from '../nav.js';
 import {useDispatch} from 'react-redux';
 import Cart from '../cart.js';
@@ -24,12 +24,12 @@ const Unit9 = (props) => {
         }}
       >
         <Grid item>
-          <img src={kit1} width="500px" alt="kit1" />
+          <img src={rav1} width="500px" alt="kit1" />
         </Grid>
         <Grid item align="center">
-          <Typography variant="h3">Kit1 </Typography>
+          <Typography variant="h3">Rav Rig 1 </Typography>
           <Typography variant="h5" my="20px">
-            $50
+            $6000
           </Typography>
           <ButtonGroup>
             <Button

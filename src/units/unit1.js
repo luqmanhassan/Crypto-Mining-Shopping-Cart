@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
-import iphone11 from '../images/iphone11.png';
+import btc1 from '../images/btc1.jpg';
 import Cart from '../cart.js';
 import Nav from '../nav.js';
 import {useDispatch} from 'react-redux';
@@ -24,13 +24,13 @@ const Unit1 = (props) => {
         }}
       >
         <Grid item>
-          <img src={iphone11} width="500px" alt="Iphone 11 Screen" />
+          <img src={btc1} width="500px" alt="Iphone 11 Screen" />
         </Grid>
 
         <Grid item className="info" align="center">
-          <Typography variant="h3">Iphone 11 Screen</Typography>
+          <Typography variant="h3">BTC Rig 1</Typography>
           <Typography variant="h5" my="20px">
-            $150
+            $2000
           </Typography>
           <ButtonGroup>
             <Button

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
-import xdataport from '../images/xdataport.jpg';
+import mon1 from '../images/mon1.jpeg';
 import Nav from '../nav.js';
 import {useDispatch} from 'react-redux';
 import Cart from '../cart.js';
@@ -24,12 +24,12 @@ const Unit5 = (props) => {
         }}
       >
         <Grid item>
-          <img src={xdataport} width="300px" alt="Iphone X Dataport" />
+          <img src={mon1} width="300px" alt="Iphone X Dataport" />
         </Grid>
         <Grid item align="center">
-          <Typography variant="h3">Iphone X Dataport </Typography>
+          <Typography variant="h3">Mon Rig 1 </Typography>
           <Typography variant="h5" my="20px">
-            $100
+            $4000
           </Typography>
           <ButtonGroup>
             <Button

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
-import xcamera from '../images/xcamera.jpeg';
+import lit1 from '../images/lit1.jpeg';
 import Nav from '../nav.js';
 import {useDispatch} from 'react-redux';
 import Cart from '../cart.js';
@@ -24,12 +24,12 @@ const Unit7 = (props) => {
         }}
       >
         <Grid item>
-          <img src={xcamera} width="500px" alt="Iphone X Camera" />
+          <img src={lit1} width="500px" alt="Iphone X Camera" />
         </Grid>
         <Grid item align="center">
-          <Typography variant="h3">Iphone X Camera </Typography>
+          <Typography variant="h3">Lit Rig 1 </Typography>
           <Typography variant="h5" my="20px">
-            $130
+            $5000
           </Typography>
           <ButtonGroup>
             <Button
