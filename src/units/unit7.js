@@ -24,7 +24,7 @@ const Unit7 = (props) => {
         }}
       >
         <Grid item>
-          <img src={lit1} width="500px" alt="Iphone X Camera" />
+          <img src={lit1} width="100%" alt="Iphone X Camera" />
         </Grid>
         <Grid item align="center">
           <Typography variant="h3">Lit Rig 1 </Typography>

@@ -24,7 +24,7 @@ const Unit4 = (props) => {
         }}
       >
         <Grid item>
-          <img src={eth2} width="500px" alt="Iphone XR Battery d" />
+          <img src={eth2} width="100%" alt="Iphone XR Battery d" />
         </Grid>
         <Grid item align="center">
           <Typography variant="h3">ETH Rig 2</Typography>

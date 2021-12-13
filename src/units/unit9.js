@@ -24,7 +24,7 @@ const Unit9 = (props) => {
         }}
       >
         <Grid item>
-          <img src={rav1} width="500px" alt="kit1" />
+          <img src={rav1} width="100%" alt="kit1" />
         </Grid>
         <Grid item align="center">
           <Typography variant="h3">Rav Rig 1 </Typography>
