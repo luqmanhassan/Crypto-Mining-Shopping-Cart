@@ -41,7 +41,7 @@ const App = () => {
           <Typography
             variant="h2"
             sx={{
-              mx: '300px',
+              mx: 'auto',
               textShadow: '0px 10px 5px black, -10px 5px 10px white',
               color: 'secondary.main',
               my: '50px',

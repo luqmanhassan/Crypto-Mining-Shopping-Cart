@@ -29,16 +29,30 @@ function Shop() {
     <Grid container className="shop">
       <Cart />
       <Nav />
-      <Grid item container sx={{display: 'flex', flexFlow: 'row nowrap'}}>
+      <Grid
+        item
+        container
+        sx={{
+          display: 'flex',
+          flexFlow: [
+            'column nowrap',
+            'column nowrap',
+            'column nowrap',
+            'row nowrap',
+            'row nowrap',
+          ],
+        }}
+      >
         <Grid
           item
           sx={{
             display: 'flex',
             flexFlow: 'column nowrap',
             p: '50px',
+            textAlign: 'center',
           }}
         >
-          <Typography variant="h3" pb="50px">
+          <Typography variant="h3" pb="50px" textAlign="center">
             Products
           </Typography>
           <Button
@@ -99,7 +113,18 @@ const Bitcoin = () => {
       item
       className="Bitcoin"
       id="Bitcoin"
-      sx={{display: 'flex', pt: '100px', ml: '100px'}}
+      sx={{
+        display: 'flex',
+        flexFlow: [
+          'column nowrap',
+          'column nowrap',
+          'row nowrap',
+          'row nowrap',
+          'row nowrap',
+        ],
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
     >
       <Product
         src={btc1}
@@ -120,7 +145,18 @@ const Ethereum = () => {
       container
       className="Ethereum"
       id="Ethereum"
-      sx={{display: 'none', pt: '100px', ml: '100px'}}
+      sx={{
+        display: 'none',
+        flexFlow: [
+          'column nowrap',
+          'column nowrap',
+          'row nowrap',
+          'row nowrap',
+          'row nowrap',
+        ],
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
     >
       <Product src={eth1} alt="Eth Rig 1" unit="Unit3" price="3000" />
       <Product src={eth2} alt="Eth Rig 2" unit="Unit4" price="3500" />
@@ -135,7 +171,18 @@ const Monacoin = () => {
       container
       className="Monacoin"
       id="Monacoin"
-      sx={{display: 'none', pt: '100px', ml: '100px'}}
+      sx={{
+        display: 'none',
+        flexFlow: [
+          'column nowrap',
+          'column nowrap',
+          'row nowrap',
+          'row nowrap',
+          'row nowrap',
+        ],
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
     >
       <Product src={mon1} alt="Mon Rig 1" unit="Unit5" price="4000" />
       <Product src={mon2} alt="Mon Rig 2" unit="Unit6" price="4500" />
@@ -150,7 +197,18 @@ const Litecoin = () => {
       container
       className="Litecoin"
       id="Litecoin"
-      sx={{display: 'none', pt: '100px', ml: '100px'}}
+      sx={{
+        display: 'none',
+        flexFlow: [
+          'column nowrap',
+          'column nowrap',
+          'row nowrap',
+          'row nowrap',
+          'row nowrap',
+        ],
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
     >
       <Product src={lit1} alt="Lit Rig 1" unit="Unit7" price="5000" />
       <Product src={lit2} alt="Lit Rig 2" unit="Unit8" price="5500" />
@@ -165,7 +223,18 @@ const Ravencoin = () => {
       container
       className="Ravencoin"
       id="Ravencoin"
-      sx={{display: 'none', pt: '100px', ml: '100px'}}
+      sx={{
+        display: 'none',
+        flexFlow: [
+          'column nowrap',
+          'column nowrap',
+          'row nowrap',
+          'row nowrap',
+          'row nowrap',
+        ],
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
     >
       <Product src={rav1} alt="Rav Rig 1" unit="Unit9" price="6000" />
       <Product src={rav2} alt="Rav Rig 2" unit="Unit10" price="6500" />
@@ -185,7 +254,7 @@ const Product = (props) => {
       }}
       direction="center"
       align="center"
-      mx="10px"
+      p="10px"
       sx={{
         p: '50px',
       }}
